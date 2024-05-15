@@ -19,7 +19,7 @@ public class TreeSet {
         // При этом все операции кроме size() и clear() перестанут работать.
         // В непустой TreeSet положить null уже нельзя из-за вызова compareTo()
 
-        Set<String> treeSet = new java.util.TreeSet<>();
+        java.util.TreeSet<String> treeSet = new java.util.TreeSet<>();
         treeSet.add("Cherry");
         treeSet.add("Banana");
         treeSet.add("Apple");
@@ -29,8 +29,8 @@ public class TreeSet {
         treeSet.remove("Cherry");
         System.out.println(treeSet);
         // Дополнительные операции TreeSet
-        System.out.println("First: " + ((java.util.TreeSet<String>) treeSet).first()); // Первый (самый маленький) элемент
-        System.out.println("Last: " + ((java.util.TreeSet<String>) treeSet).last()); // Последний (самый большой) элемент
+        System.out.println("First: " + treeSet.first()); // Первый (самый маленький) элемент
+        System.out.println("Last: " + treeSet.last()); // Последний (самый большой) элемент
 
         // ================================ TreeSet vs. HashSet vs. LinkedHashSet =================================== \\
 
